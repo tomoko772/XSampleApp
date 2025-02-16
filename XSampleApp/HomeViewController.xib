@@ -80,15 +80,23 @@
                         <constraint firstAttribute="height" constant="1" id="ILH-Gx-q3y"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0iT-Tb-Fmq">
+                    <rect key="frame" x="0.0" y="98" width="393" height="720"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="oRp-AV-2zz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3aB-Qf-hjy"/>
                 <constraint firstItem="u8c-dJ-d65" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6Ms-xN-1Gc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0iT-Tb-Fmq" secondAttribute="trailing" id="BH1-du-I2b"/>
                 <constraint firstItem="oRp-AV-2zz" firstAttribute="top" secondItem="u8c-dJ-d65" secondAttribute="bottom" id="ErH-LX-g7P"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oRp-AV-2zz" secondAttribute="trailing" id="JcB-hC-VMe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0iT-Tb-Fmq" secondAttribute="bottom" id="Nd3-qM-MpR"/>
+                <constraint firstItem="0iT-Tb-Fmq" firstAttribute="top" secondItem="oRp-AV-2zz" secondAttribute="bottom" id="UbP-RD-TvS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="u8c-dJ-d65" secondAttribute="trailing" id="fVx-x5-jsA"/>
+                <constraint firstItem="0iT-Tb-Fmq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="h8X-fc-d1B"/>
                 <constraint firstItem="u8c-dJ-d65" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mbR-3T-XvH"/>
             </constraints>
             <userDefinedRuntimeAttributes>
