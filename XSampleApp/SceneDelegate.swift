@@ -39,7 +39,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // タブバーコントローラにビューコントローラを設定
         tabBarController.viewControllers = [homeNav, searchNav, communityNav, notificationNav, messageNav]
-        
+        // タブバーの背景色を設定
+        tabBarController.tabBar.backgroundColor = UIColor(hex: "#F2F2F2")
+
         // ウィンドウのルートビューコントローラとしてタブバーコントローラを設定
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
