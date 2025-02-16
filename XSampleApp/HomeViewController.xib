@@ -24,36 +24,53 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5X2-xH-asq">
                             <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="38"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="おすすめ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNr-jo-DPc">
-                                    <rect key="frame" x="77" y="8" width="53" height="17"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="981-Bk-D9o">
+                                    <rect key="frame" x="64.666666666666671" y="35" width="67.000000000000014" height="3"/>
+                                    <color key="backgroundColor" red="0.11372549019607843" green="0.60784313725490191" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="67" id="XwW-pK-2o6"/>
+                                        <constraint firstAttribute="height" constant="3" id="srn-8f-LPT"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <real key="value" value="1.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おすすめ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNr-jo-DPc">
+                                    <rect key="frame" x="72" y="10.666666666666671" width="52.666666666666657" height="17"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="981-Bk-D9o" secondAttribute="bottom" id="2yg-Fj-cLF"/>
+                                <constraint firstItem="FNr-jo-DPc" firstAttribute="centerX" secondItem="5X2-xH-asq" secondAttribute="centerX" id="9aN-Vg-FSe"/>
+                                <constraint firstItem="981-Bk-D9o" firstAttribute="centerX" secondItem="5X2-xH-asq" secondAttribute="centerX" id="Y7K-9g-cEO"/>
+                                <constraint firstItem="FNr-jo-DPc" firstAttribute="centerY" secondItem="5X2-xH-asq" secondAttribute="centerY" id="z9L-Du-Owg"/>
+                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mv-O5-iNE">
                             <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="38"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="フォロー中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bt-tY-XRo">
-                                    <rect key="frame" x="52" y="9" width="291" height="17"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フォロー中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bt-tY-XRo">
+                                    <rect key="frame" x="65.333333333333343" y="10.666666666666671" width="65.666666666666657" height="17"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                     <color key="textColor" red="0.32549019607843138" green="0.39215686274509803" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="2Bt-tY-XRo" firstAttribute="centerY" secondItem="1mv-O5-iNE" secondAttribute="centerY" id="OfD-xu-1rS"/>
+                                <constraint firstItem="2Bt-tY-XRo" firstAttribute="centerX" secondItem="1mv-O5-iNE" secondAttribute="centerX" id="zR7-Wb-UhW"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="5X2-xH-asq" firstAttribute="centerY" secondItem="u8c-dJ-d65" secondAttribute="centerY" id="I9b-gY-2bh"/>
-                        <constraint firstItem="1mv-O5-iNE" firstAttribute="centerY" secondItem="u8c-dJ-d65" secondAttribute="centerY" id="dCy-X6-ZIC"/>
                         <constraint firstAttribute="height" constant="38" id="nHe-hN-Hzb"/>
-                        <constraint firstItem="5X2-xH-asq" firstAttribute="centerX" secondItem="u8c-dJ-d65" secondAttribute="centerX" id="sgZ-i2-QSV"/>
-                        <constraint firstItem="1mv-O5-iNE" firstAttribute="centerX" secondItem="u8c-dJ-d65" secondAttribute="centerX" id="wMC-9G-Dri"/>
                     </constraints>
                 </stackView>
             </subviews>
@@ -64,6 +81,11 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="u8c-dJ-d65" secondAttribute="trailing" id="fVx-x5-jsA"/>
                 <constraint firstItem="u8c-dJ-d65" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mbR-3T-XvH"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <real key="value" value="1.5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="41.984732824427482" y="20.422535211267608"/>
         </view>
     </objects>
