@@ -24,6 +24,16 @@
                         <constraint firstAttribute="height" constant="38" id="nHe-hN-Hzb"/>
                     </constraints>
                 </stackView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ThI-kC-B2j">
+                    <rect key="frame" x="0.0" y="59" width="181" height="47"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SqN-Zt-JLo">
+                    <rect key="frame" x="204" y="59" width="189" height="47"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -32,7 +42,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="u8c-dJ-d65" secondAttribute="trailing" id="fVx-x5-jsA"/>
                 <constraint firstItem="u8c-dJ-d65" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mbR-3T-XvH"/>
             </constraints>
-            <point key="canvasLocation" x="43" y="21"/>
+            <point key="canvasLocation" x="41.984732824427482" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
