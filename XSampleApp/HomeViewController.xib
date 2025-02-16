@@ -73,11 +73,21 @@
                         <constraint firstAttribute="height" constant="38" id="nHe-hN-Hzb"/>
                     </constraints>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRp-AV-2zz">
+                    <rect key="frame" x="0.0" y="97" width="393" height="1"/>
+                    <color key="backgroundColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ILH-Gx-q3y"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="oRp-AV-2zz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3aB-Qf-hjy"/>
                 <constraint firstItem="u8c-dJ-d65" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6Ms-xN-1Gc"/>
+                <constraint firstItem="oRp-AV-2zz" firstAttribute="top" secondItem="u8c-dJ-d65" secondAttribute="bottom" id="ErH-LX-g7P"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oRp-AV-2zz" secondAttribute="trailing" id="JcB-hC-VMe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="u8c-dJ-d65" secondAttribute="trailing" id="fVx-x5-jsA"/>
                 <constraint firstItem="u8c-dJ-d65" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mbR-3T-XvH"/>
             </constraints>
