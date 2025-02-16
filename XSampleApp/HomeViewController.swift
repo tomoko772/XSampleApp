@@ -39,5 +39,24 @@ final class HomeViewController: UIViewController {
         
         // ナビゲーションアイテムのタイトルビューに設定
         self.navigationItem.titleView = titleView
+        
+        // 左のバーボタンアイテムに画像を設定する
+        if let image = UIImage(named: "ic_daibutu") {
+            // 画像のサイズを32x32にリサイズし、円にする
+            let circularImage = image.makeCircularImage(image: image, size: CGSize(width: 32, height: 32))
+            // 画像を使ってUIBarButtonItemを作成する
+            let leftBarButtonItem = UIBarButtonItem(image: circularImage?.withRenderingMode(.alwaysOriginal),
+                                                    style: .plain,
+                                                    target: self,
+                                                    action: #selector(didTapLeftBarButton))
+            // leftBarButtonItemに設定する
+            self.navigationItem.leftBarButtonItem = leftBarButtonItem
+        }
+    }
+    
+    /// 左のバーボタンアイテムがタップされた
+    @objc func didTapLeftBarButton() {
+        // ボタンがタップされたときのアクションをここに記述
+        print("Left bar button tapped")
     }
 }
