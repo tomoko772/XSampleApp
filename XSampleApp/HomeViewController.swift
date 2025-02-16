@@ -14,6 +14,9 @@ final class HomeViewController: UIViewController {
     
     // MARK: - IBOutlets
     
+    ///ポストボタンをタップ
+    @IBOutlet weak var tableView: UITableView!
+    
     // MARK: - View Life-Cycle Methods
     
     override func viewDidLoad() {
@@ -23,6 +26,8 @@ final class HomeViewController: UIViewController {
     }
     
     // MARK: - IBActions
+    @IBAction func didTapPostButton(_ sender: Any) {
+    }
     
     // MARK: - Other Methods
     

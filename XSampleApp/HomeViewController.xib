@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="XSampleApp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="0iT-Tb-Fmq" id="Bwh-gv-uuO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -101,6 +102,9 @@
                             <integer key="value" value="29"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapPostButton:" destination="-1" eventType="touchUpInside" id="lfT-lG-jEi"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
