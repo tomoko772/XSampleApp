@@ -13,8 +13,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: scene)
-        let navigationController = UINavigationController(rootViewController: HomeViewController())
-        window?.rootViewController = navigationController
+        // タブバーコントローラの作成
+        let tabBarController = UITabBarController()
+        
+        // 各ビューコントローラの作成
+        let homeVC = HomeViewController()
+        let searchVC = UIViewController()
+        let communityVC = UIViewController()
+        let notificationVC = UIViewController()
+        let messageVC = UIViewController()
+        
+        // 各ビューコントローラをナビゲーションコントローラにラップ
+        let homeNav = UINavigationController(rootViewController: homeVC)
+        let searchNav = UINavigationController(rootViewController: searchVC)
+        let communityNav = UINavigationController(rootViewController: communityVC)
+        let notificationNav = UINavigationController(rootViewController: notificationVC)
+        let messageNav = UINavigationController(rootViewController: messageVC)
+        
+        // タブバーアイテムの設定
+        homeNav.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_home"), tag: 0)
+        searchNav.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_search"), tag: 1)
+        communityNav.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_friends"), tag: 2)
+        notificationNav.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_bell"), tag: 3)
+        messageNav.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "ic_mail"), tag: 4)
+        
+        // タブバーコントローラにビューコントローラを設定
+        tabBarController.viewControllers = [homeNav, searchNav, communityNav, notificationNav, messageNav]
+        // タブバーの背景色を設定
+        tabBarController.tabBar.backgroundColor = UIColor(hex: "#F2F2F2")
+
+        // ウィンドウのルートビューコントローラとしてタブバーコントローラを設定
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
     
