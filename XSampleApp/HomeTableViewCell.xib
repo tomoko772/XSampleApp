@@ -14,8 +14,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DBw-0h-iI1">
-                        <rect key="frame" x="14" y="-9" width="45" height="45"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DBw-0h-iI1">
+                        <rect key="frame" x="8" y="0.0" width="45" height="45"/>
                         <color key="tintColor" red="0.32549019607843138" green="0.39215686274509803" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="45" id="9Lf-PG-EuX"/>
@@ -29,8 +29,8 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="DBw-0h-iI1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="6Lh-W1-ESZ"/>
-                    <constraint firstAttribute="bottom" secondItem="DBw-0h-iI1" secondAttribute="bottom" constant="8" id="rg7-cJ-7Jv"/>
+                    <constraint firstItem="DBw-0h-iI1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="0hr-L1-unQ"/>
+                    <constraint firstItem="DBw-0h-iI1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="xIw-5Y-fWz"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="102" y="20"/>
