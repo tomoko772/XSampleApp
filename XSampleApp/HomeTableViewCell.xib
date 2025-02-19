@@ -65,16 +65,50 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="ic_reply_mark"/>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7j-Wo-z9i">
+                        <rect key="frame" x="108" y="102" width="20" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="7zf-EV-H6W"/>
+                            <constraint firstAttribute="height" constant="14" id="Ad9-sS-POX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IO-Yl-co4">
+                        <rect key="frame" x="135" y="96" width="19" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="19" id="hVo-A1-CUR"/>
+                            <constraint firstAttribute="height" constant="14" id="k4b-Ob-rXP"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="ic_repost_mark"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhH-Ig-mmm">
+                        <rect key="frame" x="158" y="106" width="14" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="AS9-WJ-F1L"/>
+                            <constraint firstAttribute="width" constant="14" id="QaB-AQ-fMn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="DBw-0h-iI1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="0hr-L1-unQ"/>
                     <constraint firstItem="jLK-Uc-22p" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Abr-fU-4oQ"/>
                     <constraint firstAttribute="trailing" secondItem="E6N-01-xUt" secondAttribute="trailing" constant="3" id="EPi-qk-N8q"/>
+                    <constraint firstItem="9IO-Yl-co4" firstAttribute="leading" secondItem="xsc-3c-POd" secondAttribute="trailing" constant="31" id="IfJ-yu-DYl"/>
+                    <constraint firstItem="9IO-Yl-co4" firstAttribute="centerY" secondItem="xsc-3c-POd" secondAttribute="centerY" id="LzM-VJ-isk"/>
                     <constraint firstItem="QUT-IA-07U" firstAttribute="centerY" secondItem="jLK-Uc-22p" secondAttribute="centerY" id="P6Y-k8-CCZ"/>
+                    <constraint firstItem="vhH-Ig-mmm" firstAttribute="leading" secondItem="9IO-Yl-co4" secondAttribute="trailing" constant="4" id="R9v-NA-Vja"/>
                     <constraint firstItem="jLK-Uc-22p" firstAttribute="leading" secondItem="DBw-0h-iI1" secondAttribute="trailing" constant="8" id="SLA-fo-7lf"/>
                     <constraint firstAttribute="trailing" secondItem="9D7-4T-e4h" secondAttribute="trailing" constant="13" id="Tbq-Bt-DbJ"/>
+                    <constraint firstItem="Q7j-Wo-z9i" firstAttribute="leading" secondItem="xsc-3c-POd" secondAttribute="trailing" constant="4" id="WbF-d1-Grv"/>
                     <constraint firstItem="xsc-3c-POd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="61" id="Yqu-Dw-ccs"/>
                     <constraint firstItem="9D7-4T-e4h" firstAttribute="leading" secondItem="DBw-0h-iI1" secondAttribute="trailing" constant="8" id="YzO-JY-mnh"/>
+                    <constraint firstItem="Q7j-Wo-z9i" firstAttribute="centerY" secondItem="xsc-3c-POd" secondAttribute="centerY" id="aIK-gp-HUW"/>
                     <constraint firstItem="E6N-01-xUt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="bRN-tl-0PZ"/>
                     <constraint firstItem="QUT-IA-07U" firstAttribute="leading" secondItem="SQz-5E-9v2" secondAttribute="trailing" constant="1" id="exO-Gf-jTH"/>
                     <constraint firstItem="9D7-4T-e4h" firstAttribute="top" secondItem="jLK-Uc-22p" secondAttribute="bottom" constant="4" id="fId-Nu-XUj"/>
@@ -85,6 +119,7 @@
                     <constraint firstItem="E6N-01-xUt" firstAttribute="leading" secondItem="QUT-IA-07U" secondAttribute="trailing" constant="79" id="szl-FS-tO2"/>
                     <constraint firstItem="DBw-0h-iI1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="xIw-5Y-fWz"/>
                     <constraint firstItem="QUT-IA-07U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="xLz-8U-oGB"/>
+                    <constraint firstItem="vhH-Ig-mmm" firstAttribute="centerY" secondItem="xsc-3c-POd" secondAttribute="centerY" id="zl7-Dj-LRQ"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="100.76335877862596" y="57.394366197183103"/>
@@ -94,5 +129,6 @@
         <image name="ic_3dots" width="27" height="22"/>
         <image name="ic_official_mark" width="16" height="15"/>
         <image name="ic_reply_mark" width="19" height="18"/>
+        <image name="ic_repost_mark" width="19" height="14"/>
     </resources>
 </document>
