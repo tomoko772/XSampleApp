@@ -8,10 +8,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="272" translatesAutoresizingMaskIntoConstraints="NO" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="XSampleApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="272"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="151" translatesAutoresizingMaskIntoConstraints="NO" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="XSampleApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="151"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="272"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="151"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DBw-0h-iI1">
@@ -60,6 +60,11 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsc-3c-POd">
+                        <rect key="frame" x="61" y="96" width="43" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="ic_reply_mark"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="DBw-0h-iI1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="0hr-L1-unQ"/>
@@ -68,6 +73,7 @@
                     <constraint firstItem="QUT-IA-07U" firstAttribute="centerY" secondItem="jLK-Uc-22p" secondAttribute="centerY" id="P6Y-k8-CCZ"/>
                     <constraint firstItem="jLK-Uc-22p" firstAttribute="leading" secondItem="DBw-0h-iI1" secondAttribute="trailing" constant="8" id="SLA-fo-7lf"/>
                     <constraint firstAttribute="trailing" secondItem="9D7-4T-e4h" secondAttribute="trailing" constant="13" id="Tbq-Bt-DbJ"/>
+                    <constraint firstItem="xsc-3c-POd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="61" id="Yqu-Dw-ccs"/>
                     <constraint firstItem="9D7-4T-e4h" firstAttribute="leading" secondItem="DBw-0h-iI1" secondAttribute="trailing" constant="8" id="YzO-JY-mnh"/>
                     <constraint firstItem="E6N-01-xUt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="bRN-tl-0PZ"/>
                     <constraint firstItem="QUT-IA-07U" firstAttribute="leading" secondItem="SQz-5E-9v2" secondAttribute="trailing" constant="1" id="exO-Gf-jTH"/>
@@ -75,16 +81,18 @@
                     <constraint firstItem="SQz-5E-9v2" firstAttribute="centerY" secondItem="jLK-Uc-22p" secondAttribute="centerY" id="gHZ-Qb-avB"/>
                     <constraint firstItem="jLK-Uc-22p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="jdT-mJ-Wt5"/>
                     <constraint firstItem="E6N-01-xUt" firstAttribute="centerY" secondItem="jLK-Uc-22p" secondAttribute="centerY" id="kJV-lQ-nZG"/>
+                    <constraint firstAttribute="bottom" secondItem="xsc-3c-POd" secondAttribute="bottom" constant="13" id="rCu-Hm-M7b"/>
                     <constraint firstItem="E6N-01-xUt" firstAttribute="leading" secondItem="QUT-IA-07U" secondAttribute="trailing" constant="79" id="szl-FS-tO2"/>
                     <constraint firstItem="DBw-0h-iI1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="xIw-5Y-fWz"/>
                     <constraint firstItem="QUT-IA-07U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="xLz-8U-oGB"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="100.76335877862596" y="100"/>
+            <point key="canvasLocation" x="100.76335877862596" y="57.394366197183103"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="ic_3dots" width="27" height="22"/>
         <image name="ic_official_mark" width="16" height="15"/>
+        <image name="ic_reply_mark" width="19" height="18"/>
     </resources>
 </document>
