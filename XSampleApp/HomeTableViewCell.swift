@@ -17,5 +17,9 @@ class HomeTableViewCell: UITableViewCell {
     ///本文ラベル
     @IBOutlet weak var bodyLabel: UILabel!
     
-
+    func configure(imageString: String, name: String, body: String) {
+        self.userImageView.image = UIImage (named: imageString)
+        self.userNameLabel.text = name
+        self.bodyLabel.text = body
+    }
 }
