@@ -195,6 +195,11 @@
                     <constraint firstItem="vhH-Ig-mmm" firstAttribute="centerY" secondItem="xsc-3c-POd" secondAttribute="centerY" id="zl7-Dj-LRQ"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="bodyLabel" destination="9D7-4T-e4h" id="Aas-kp-kVv"/>
+                <outlet property="userImageView" destination="DBw-0h-iI1" id="yME-f6-Z28"/>
+                <outlet property="userNameLabel" destination="jLK-Uc-22p" id="Sy4-6t-2nK"/>
+            </connections>
             <point key="canvasLocation" x="-71.755725190839698" y="94.718309859154928"/>
         </tableViewCell>
         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="E6N-01-xUt">
