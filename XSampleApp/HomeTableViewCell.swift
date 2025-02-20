@@ -7,6 +7,7 @@
 
 import UIKit
 
+///ホーム画面のセル
 class HomeTableViewCell: UITableViewCell {
     
     ///ユーザーイメージビュー
@@ -16,15 +17,5 @@ class HomeTableViewCell: UITableViewCell {
     ///本文ラベル
     @IBOutlet weak var bodyLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
+
 }
