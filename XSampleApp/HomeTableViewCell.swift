@@ -11,11 +11,11 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
     
     ///ユーザーイメージビュー
-    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet private weak var userImageView: UIImageView!
     ///ユーザー名ラベル
-    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet private weak var userNameLabel: UILabel!
     ///本文ラベル
-    @IBOutlet weak var bodyLabel: UILabel!
+    @IBOutlet private weak var bodyLabel: UILabel!
     
     func configure(imageString: String, name: String, body: String) {
         self.userImageView.image = UIImage (named: imageString)
