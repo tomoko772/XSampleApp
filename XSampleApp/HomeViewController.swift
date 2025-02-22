@@ -64,4 +64,13 @@ final class HomeViewController: UIViewController {
         // ボタンがタップされたときのアクションをここに記述
         print("Left bar button tapped")
     }
+    
+    private func configureTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        // カスタムセル
+        let nib = UINib(nibName: "HomeTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "Cell")
+        tableView.rowHeight = UITableView.automaticDimension
+    }
 }
