@@ -23,7 +23,7 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         configureNavigationBar()
-        　　　　　configure.tableView()
+        configureTableView()
     }
     
     // MARK: - IBActions
