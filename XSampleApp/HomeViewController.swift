@@ -99,14 +99,16 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource {
     /// データの数（＝セルの数）を返すメソッド
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return cells.count
     }
     
     /// 各セルの内容を返すメソッド
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! HomeTableViewCell
-        // ここにセルに渡す処理を書く
+        cell.configure(imageString: cells[indexPath.row].imageString,
+                       name: cells[indexPath.row].name,
+                       body: cells[indexPath.row].body)
         return cell
     }
 }
