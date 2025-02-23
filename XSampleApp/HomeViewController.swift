@@ -12,6 +12,24 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Properties
     
+    let cells: [Home] = [
+        Home(
+            imageString: "image1",
+            name: "山田太郎",
+            body: "This is the body of cell 1"
+        ),
+        Home(
+            imageString: "image2",
+            name: "佐藤花子",
+            body: "This is the body of cell 2"
+        ),
+        Home(
+            imageString: "image3",
+            name: "吉田沙織",
+            body: "This is the body of cell 3"
+        )
+    ]
+    
     // MARK: - IBOutlets
     
     ///ポストボタンをタップ
@@ -23,6 +41,7 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         configureNavigationBar()
+        configureTableView()
     }
     
     // MARK: - IBActions
@@ -63,5 +82,42 @@ final class HomeViewController: UIViewController {
     @objc func didTapLeftBarButton() {
         // ボタンがタップされたときのアクションをここに記述
         print("Left bar button tapped")
+    }
+    
+    private func configureTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        // カスタムセル
+        let nib = UINib(nibName: "HomeTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "Cell")
+        tableView.rowHeight = UITableView.automaticDimension
+    }
+}
+
+// MARK: - UITableViewDataSource
+
+extension HomeViewController: UITableViewDataSource {
+    /// データの数（＝セルの数）を返すメソッド
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cells.count
+    }
+    
+    /// 各セルの内容を返すメソッド
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // 再利用可能な cell を得る
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! HomeTableViewCell
+        cell.configure(imageString: cells[indexPath.row].imageString,
+                       name: cells[indexPath.row].name,
+                       body: cells[indexPath.row].body)
+        return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension HomeViewController: UITableViewDelegate {
+    /// セルをタップされた時のメソッド
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // セルがタップされたときに実行したいアクションをここに追加します
     }
 }
