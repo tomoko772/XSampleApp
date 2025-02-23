@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostEdit_ViewController" customModule="XSampleApp" customModuleProvider="target">
             <connections>
+                <outlet property="nameTextField" destination="YAw-cF-7NN" id="oxW-74-QJk"/>
+                <outlet property="textView" destination="bTg-36-L60" id="eMd-RP-Rfu"/>
+                <outlet property="userImageView" destination="i5M-Pr-FkT" id="qCJ-9q-ep0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,7 +41,7 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bTg-36-L60">
                     <rect key="frame" x="54" y="109" width="328" height="709"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -47,15 +50,15 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="YAw-cF-7NN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="6" id="4kw-rH-DyK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bTg-36-L60" secondAttribute="trailing" constant="11" id="9c0-UL-WLD"/>
                 <constraint firstItem="Qeb-sq-EPn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="11" id="9y3-g5-gUd"/>
-                <constraint firstItem="YAw-cF-7NN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="6" id="F9i-Dz-vBc"/>
-                <constraint firstItem="bTg-36-L60" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="HNQ-9G-2iX"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YAw-cF-7NN" secondAttribute="trailing" constant="11" id="U1h-aF-lrs"/>
-                <constraint firstItem="YAw-cF-7NN" firstAttribute="leading" secondItem="Qeb-sq-EPn" secondAttribute="trailing" constant="8" id="eh7-AW-GAN"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bTg-36-L60" secondAttribute="trailing" constant="11" id="lgP-hY-WtV"/>
+                <constraint firstItem="bTg-36-L60" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="CM8-2n-Den"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YAw-cF-7NN" secondAttribute="trailing" constant="11" id="Cb4-rB-WOg"/>
+                <constraint firstItem="bTg-36-L60" firstAttribute="leading" secondItem="YAw-cF-7NN" secondAttribute="leading" id="JPN-t0-knM"/>
+                <constraint firstItem="bTg-36-L60" firstAttribute="top" secondItem="YAw-cF-7NN" secondAttribute="bottom" constant="10" id="Jlb-CA-rs0"/>
+                <constraint firstItem="YAw-cF-7NN" firstAttribute="leading" secondItem="Qeb-sq-EPn" secondAttribute="trailing" constant="8" id="LAo-bH-Nod"/>
                 <constraint firstItem="Qeb-sq-EPn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="4" id="oQM-x4-02d"/>
-                <constraint firstItem="bTg-36-L60" firstAttribute="top" secondItem="YAw-cF-7NN" secondAttribute="bottom" constant="10" id="rOx-C8-kol"/>
-                <constraint firstItem="bTg-36-L60" firstAttribute="leading" secondItem="YAw-cF-7NN" secondAttribute="leading" id="xaJ-F4-eg6"/>
             </constraints>
             <point key="canvasLocation" x="138" y="20"/>
         </view>
