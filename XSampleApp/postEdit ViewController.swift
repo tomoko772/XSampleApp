@@ -1,5 +1,5 @@
 //
-//  PostEdit ViewController.swift
+//  postEditViewController.swift
 //  XSampleApp
 //
 //  Created by Tomoko T. Nakao on 2025/02/24.
@@ -8,7 +8,7 @@
 import UIKit
 
 ///ポスト編集画面
-class PostEdit_ViewController: UIViewController {
+class postEdit_ViewController: UIViewController {
     
     ///自分のプロフイール画像
     @IBOutlet private weak var userImageView: UIView!
