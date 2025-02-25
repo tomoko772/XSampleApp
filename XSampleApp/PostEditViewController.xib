@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="postEdit_ViewController" customModule="XSampleApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostEditViewController" customModule="XSampleApp" customModuleProvider="target">
             <connections>
                 <outlet property="nameTextField" destination="YAw-cF-7NN" id="oxW-74-QJk"/>
                 <outlet property="textView" destination="bTg-36-L60" id="eMd-RP-Rfu"/>
