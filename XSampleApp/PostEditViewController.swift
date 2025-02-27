@@ -41,7 +41,9 @@ class PostEditViewController: UIViewController {
     
     ///キャンセルパーボタンをタップ
     @objc func didTapCancelButtonButton( )  {
-        //ボタンがタップされたときの処理をここに記述
+            // 前の画面に戻る
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     private func configurePostButton() -> UIButton  {
