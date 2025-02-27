@@ -17,21 +17,50 @@ class PostEditViewController: UIViewController {
     ///テキストビュー
     @IBOutlet private weak var textView: UITextView!
     
+    // MARK: - View Life-Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        configureBarButtonItems()
     }
     
+    // MARK: - Other Methods
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    private func configureBarButtonItems( ) {
+        let cancelButton = UIBarButtonItem(title:"キャンセル",
+                                           style: .plain,
+                                           target: self,
+                                           action: #selector(didTapCancelButtonButton))
+        cancelButton.tintColor = UIColor.black
+        navigationItem.leftBarButtonItem = cancelButton
+        
+        let postButton = UIBarButtonItem(customView: configurePostButton( ))
+        navigationItem.rightBarButtonItem = postButton
+    }
     
+    ///キャンセルパーボタンをタップ
+    @objc func didTapCancelButtonButton( )  {
+        //ボタンがタップされたときの処理をここに記述
+    }
+    
+    private func configurePostButton() -> UIButton  {
+        let postButton = UIButton (type: .custom)
+        postButton.setTitle("ポスト", for: .normal) //ボタンタイトルを設定
+        postButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)//フォントサイズを設定
+        postButton.backgroundColor = UIColor(hex: "#109BF8")//背景色を設定
+        postButton.layer.cornerRadius=16//角丸を設定
+        postButton.frame = CGRect(x: 0, y: 0, width: 70, height: 32)//サイズを設定
+        
+        // customButtonにアクションを追加
+        postButton.addTarget (self,
+                              action: #selector(didTapPostButton) ,
+                              for: .touchUpInside)
+        return postButton
+    }
+    
+    ///「ポスト」バーボタンをタップ
+    @objc private func didTapPostButton( ) {
+        //ボタンがタップされたときの処理をここに記述
+    }
 }
