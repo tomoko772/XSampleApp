@@ -41,10 +41,10 @@ class PostEditViewController: UIViewController {
     
     ///キャンセルパーボタンをタップ
     @objc func didTapCancelButtonButton( )  {
-            // 前の画面に戻る
-            dismiss(animated: true, completion: nil)
-        }
+        // 前の画面に戻る
+        dismiss(animated: true, completion: nil)
     }
+    
     
     private func configurePostButton() -> UIButton  {
         let postButton = UIButton (type: .custom)
