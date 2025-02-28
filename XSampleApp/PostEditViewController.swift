@@ -47,8 +47,8 @@ class PostEditViewController: UIViewController {
     }
     
     // MARK: - UITextViewDelegate
-        
-   
+    
+    
     private func configureBarButtonItems( ) {
         let cancelButton = UIBarButtonItem(title:"キャンセル",
                                            style: .plain,
@@ -87,13 +87,10 @@ class PostEditViewController: UIViewController {
     @objc private func didTapPostButton( ) {
         //ボタンがタップされたときの処理をここに記述
     }
-    
-    
-    
 }
 
 extension PostEditViewController: UITextViewDelegate {
-
+    
     /// テキストが編集されたときに呼ばれる
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == placeholderText && textView.textColor == UIColor.lightGray {
@@ -101,7 +98,7 @@ extension PostEditViewController: UITextViewDelegate {
             textView.textColor = UIColor.black
         }
     }
-
+    
     /// テキストフィールドがフォーカスを失ったときに呼ばれる
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
@@ -109,4 +106,34 @@ extension PostEditViewController: UITextViewDelegate {
             textView.textColor = UIColor.lightGray
         }
     }
+    
+    /// textview文字数制限
+    func textView(_ textView: UITextView,
+                  shouldChangeTextIn range: NSRange,
+                  replacementText text: String) -> Bool {
+        let textCount = textView.text.count + (text.count - range.length)
+        return checkCharacterLimit(textCount: textCount)
+    }
+    
+    /// 140文字以下かどうかをチェック
+    private func checkCharacterLimit(textCount: Int) -> Bool {
+        // 140文字以下の場合
+        if textCount <= 140 {
+            return true
+        } else {
+            showCharacterLimitAlert()
+            return false
+        }
+    }
+    
+    /// アラートを表示
+    private func showCharacterLimitAlert() {
+        let alert = UIAlertController(title: "文字数制限オーバー",
+                                      message: "ツイートは140文字以内にしてください。",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
+
+
