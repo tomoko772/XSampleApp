@@ -10,6 +10,15 @@ import UIKit
 ///ポスト編集画面
 class PostEditViewController: UIViewController {
     
+    
+    // Properties
+    
+    private let placeholderText = "いまどうしてる？"
+    
+    // MARK: - IBOutlets
+    
+    @IBOutlet private weak var placeholderTextView: UITextView!
+    
     ///自分のプロフイール画像
     @IBOutlet private weak var userImageView: UIView!
     ///名前テキストフィールド
@@ -23,10 +32,23 @@ class PostEditViewController: UIViewController {
         super.viewDidLoad()
         
         configureBarButtonItems()
+        configureTextView()
     }
     
     // MARK: - Other Methods
     
+    private func configureTextView() {
+        // プレースホルダーテキストを設定
+        placeholderTextView.text = placeholderText
+        placeholderTextView.textColor = UIColor.lightGray
+        
+        // デリゲートを設定
+        placeholderTextView.delegate = self
+    }
+    
+    // MARK: - UITextViewDelegate
+        
+   
     private func configureBarButtonItems( ) {
         let cancelButton = UIBarButtonItem(title:"キャンセル",
                                            style: .plain,
@@ -64,5 +86,27 @@ class PostEditViewController: UIViewController {
     ///「ポスト」バーボタンをタップ
     @objc private func didTapPostButton( ) {
         //ボタンがタップされたときの処理をここに記述
+    }
+    
+    
+    
+}
+
+extension PostEditViewController: UITextViewDelegate {
+
+    /// テキストが編集されたときに呼ばれる
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == placeholderText && textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+
+    /// テキストフィールドがフォーカスを失ったときに呼ばれる
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = placeholderText
+            textView.textColor = UIColor.lightGray
+        }
     }
 }

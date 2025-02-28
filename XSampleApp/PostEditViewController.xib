@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostEditViewController" customModule="XSampleApp" customModuleProvider="target">
             <connections>
                 <outlet property="nameTextField" destination="YAw-cF-7NN" id="oxW-74-QJk"/>
+                <outlet property="placeholderTextView" destination="bTg-36-L60" id="0wZ-Gl-pIi"/>
                 <outlet property="textView" destination="bTg-36-L60" id="eMd-RP-Rfu"/>
                 <outlet property="userImageView" destination="i5M-Pr-FkT" id="qCJ-9q-ep0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
