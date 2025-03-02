@@ -46,8 +46,6 @@ class PostEditViewController: UIViewController {
         placeholderTextView.delegate = self
     }
     
-    // MARK: - UITextViewDelegate
-    
     private func configureBarButtonItems() {
         let cancelButton = UIBarButtonItem(title:"キャンセル",
                                            style: .plain,
