@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: -　ポスト編集画面
+/// ポスト編集画面
 
 class PostEditViewController: UIViewController {
     
