@@ -8,7 +8,6 @@
 import UIKit
 
 /// ポスト編集画面
-
 class PostEditViewController: UIViewController {
     
     // MARK: -　Properties
