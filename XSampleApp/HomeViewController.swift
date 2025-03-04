@@ -73,11 +73,22 @@ final class HomeViewController: UIViewController {
         self.navigationItem.titleView = titleView
         
         // 左のバーボタンアイテムに画像を設定する
-        if let image = UIImage(named: "ic_daibutu") {
-            // 画像のサイズを32x32にリサイズし、円にする
+        if let profile = realmManager.getProfile(),
+           let imageString = profile.imageString,
+           let imageData = Data(base64Encoded: imageString),
+           let image = UIImage(data: imageData) {
+            // 画像のサイズを32x32にリサイズ
             let circularImage = image.makeCircularImage(image: image, size: CGSize(width: 32, height: 32))
             // 画像を使ってUIBarButtonItemを作成する
             let leftBarButtonItem = UIBarButtonItem(image: circularImage?.withRenderingMode(.alwaysOriginal),
+                                                    style: .plain,
+                                                    target: self,
+                                                    action: #selector(didTapLeftBarButton))
+            // leftBarButtonItemに設定する
+            self.navigationItem.leftBarButtonItem = leftBarButtonItem
+        } else {
+            // 画像を設定していない場合
+            let leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person"),
                                                     style: .plain,
                                                     target: self,
                                                     action: #selector(didTapLeftBarButton))
