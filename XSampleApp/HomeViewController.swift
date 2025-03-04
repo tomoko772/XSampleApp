@@ -29,6 +29,8 @@ final class HomeViewController: UIViewController {
             body: "This is the body of cell 3"
         )
     ]
+    ///RealmManagerのインスタンス
+    private let realmManager = RealmManager()
     
     // MARK: - IBOutlets
     
