@@ -86,8 +86,11 @@ final class HomeViewController: UIViewController {
     
     /// 左のバーボタンアイテムがタップされた
     @objc func didTapLeftBarButton() {
-        // ボタンがタップされたときのアクションをここに記述
-        print("Left bar button tapped")
+        // イメージピッカーを表示
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
     }
     
     private func configureTableView() {
