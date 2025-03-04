@@ -13,6 +13,8 @@ class PostEditViewController: UIViewController {
     // MARK: -　Properties
     
     private let placeholderText = "いまどうしてる？"
+    ///RealmManagerのインスタンス
+    private let realmManager = RealmManager.shared
     
     // MARK: - IBOutlets
     
@@ -31,6 +33,7 @@ class PostEditViewController: UIViewController {
         super.viewDidLoad()
         
         configureBarButtonItems()
+        configureProfileImage()
         configureTextView()
     }
     
@@ -81,6 +84,18 @@ class PostEditViewController: UIViewController {
     /// 「ポスト」バーボタンをタップ
     @objc private func didTapPostButton() {
         // ボタンがタップされたときの処理をここに記述
+    }
+    
+    ///プロフィール画像の設定
+    private func configureProfileImage() {
+        if let profile = realmManager.getProfile(),
+           let imageString = profile.imageString,
+           let imageData = Data(base64Encoded: imageString),
+           let image = UIImage(data: imageData) {
+            userImageView.image = image
+        } else {
+            userImageView.image = UIImage(systemName: "person")
+        }
     }
 }
 
