@@ -21,7 +21,7 @@ class PostEditViewController: UIViewController {
     ///　プレースホルダー
     @IBOutlet private weak var placeholderTextView: UITextView!
     /// 自分のプロフイール画像
-    @IBOutlet private weak var userImageView: UIView!
+    @IBOutlet private weak var userImageView: UIImageView!
     /// 名前テキストフィールド
     @IBOutlet private weak var nameTextField: UITextField!
     /// テキストビュー

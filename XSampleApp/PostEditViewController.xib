@@ -13,7 +13,7 @@
                 <outlet property="nameTextField" destination="YAw-cF-7NN" id="oxW-74-QJk"/>
                 <outlet property="placeholderTextView" destination="bTg-36-L60" id="0wZ-Gl-pIi"/>
                 <outlet property="textView" destination="bTg-36-L60" id="eMd-RP-Rfu"/>
-                <outlet property="userImageView" destination="i5M-Pr-FkT" id="qCJ-9q-ep0"/>
+                <outlet property="userImageView" destination="Qeb-sq-EPn" id="h7e-dn-WxD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
