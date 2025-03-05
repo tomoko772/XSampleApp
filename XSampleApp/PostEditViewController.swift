@@ -86,7 +86,7 @@ class PostEditViewController: UIViewController {
         // ボタンがタップされたときの処理をここに記述
     }
     
-    ///プロフィール画像の設定
+    /// プロフィール画像の設定
     private func configureProfileImage() {
         if let profile = realmManager.getProfile(),
            let imageString = profile.imageString,
