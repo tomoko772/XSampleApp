@@ -13,7 +13,7 @@ class PostEditViewController: UIViewController {
     // MARK: -　Properties
     
     private let placeholderText = "いまどうしてる？"
-    ///RealmManagerのインスタンス
+    /// RealmManagerのインスタンス
     private let realmManager = RealmManager.shared
     
     // MARK: - IBOutlets
