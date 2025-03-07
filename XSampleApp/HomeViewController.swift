@@ -34,7 +34,7 @@ final class HomeViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    ///ポストボタンをタップ
+    /// ポストボタンをタップ
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - View Life-Cycle Methods
@@ -50,10 +50,10 @@ final class HomeViewController: UIViewController {
     
     /// ポストボタンをタップ
     @IBAction func didTapPostButton(_ sender: Any) {
-            let vc = PostEditViewController()
-            let navi = UINavigationController(rootViewController: vc)
-            navi.modalPresentationStyle = .fullScreen
-            navigationController?.present(navi, animated: true)
+        let vc = PostEditViewController()
+        let navi = UINavigationController(rootViewController: vc)
+        navi.modalPresentationStyle = .fullScreen
+        navigationController?.present(navi, animated: true)
     }
     
     // MARK: - Other Methods
