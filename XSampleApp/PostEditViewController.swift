@@ -15,6 +15,8 @@ class PostEditViewController: UIViewController {
     private let placeholderText = "いまどうしてる？"
     /// RealmManagerのインスタンス
     private let realmManager = RealmManager.shared
+    /// 画像
+    private var imageString: String = ""
     
     // MARK: - IBOutlets
     
