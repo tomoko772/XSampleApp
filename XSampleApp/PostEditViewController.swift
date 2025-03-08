@@ -94,7 +94,8 @@ class PostEditViewController: UIViewController {
            let imageString = profile.imageString,
            let imageData = Data(base64Encoded: imageString),
            let image = UIImage(data: imageData) {
-            userImageView.image = image
+            self.imageString = imageString
+            self.userImageView.image = image
         } else {
             userImageView.image = UIImage(systemName: "person")
         }
