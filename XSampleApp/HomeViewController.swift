@@ -29,10 +29,12 @@ final class HomeViewController: UIViewController {
             body: "This is the body of cell 3"
         )
     ]
+    /// RealmManagerのインスタンス
+    private let realmManager = RealmManager()
     
     // MARK: - IBOutlets
     
-    ///ポストボタンをタップ
+    /// ポストボタンをタップ
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - View Life-Cycle Methods
@@ -48,10 +50,10 @@ final class HomeViewController: UIViewController {
     
     /// ポストボタンをタップ
     @IBAction func didTapPostButton(_ sender: Any) {
-            let vc = PostEditViewController()
-            let navi = UINavigationController(rootViewController: vc)
-            navi.modalPresentationStyle = .fullScreen
-            navigationController?.present(navi, animated: true)
+        let vc = PostEditViewController()
+        let navi = UINavigationController(rootViewController: vc)
+        navi.modalPresentationStyle = .fullScreen
+        navigationController?.present(navi, animated: true)
     }
     
     // MARK: - Other Methods
@@ -71,11 +73,22 @@ final class HomeViewController: UIViewController {
         self.navigationItem.titleView = titleView
         
         // 左のバーボタンアイテムに画像を設定する
-        if let image = UIImage(named: "ic_daibutu") {
-            // 画像のサイズを32x32にリサイズし、円にする
+        if let profile = realmManager.getProfile(),
+           let imageString = profile.imageString,
+           let imageData = Data(base64Encoded: imageString),
+           let image = UIImage(data: imageData) {
+            // 画像のサイズを32x32にリサイズ
             let circularImage = image.makeCircularImage(image: image, size: CGSize(width: 32, height: 32))
             // 画像を使ってUIBarButtonItemを作成する
             let leftBarButtonItem = UIBarButtonItem(image: circularImage?.withRenderingMode(.alwaysOriginal),
+                                                    style: .plain,
+                                                    target: self,
+                                                    action: #selector(didTapLeftBarButton))
+            // leftBarButtonItemに設定する
+            self.navigationItem.leftBarButtonItem = leftBarButtonItem
+        } else {
+            // 画像を設定していない場合
+            let leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person"),
                                                     style: .plain,
                                                     target: self,
                                                     action: #selector(didTapLeftBarButton))
@@ -86,8 +99,11 @@ final class HomeViewController: UIViewController {
     
     /// 左のバーボタンアイテムがタップされた
     @objc func didTapLeftBarButton() {
-        // ボタンがタップされたときのアクションをここに記述
-        print("Left bar button tapped")
+        // イメージピッカーを表示
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
     }
     
     private func configureTableView() {
@@ -125,5 +141,36 @@ extension HomeViewController: UITableViewDelegate {
     /// セルをタップされた時のメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // セルがタップされたときに実行したいアクションをここに追加します
+    }
+}
+
+// MARK: - UIImagePickerControllerDelegate & UINavigationControllerDelegate
+
+extension HomeViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage,
+           let imageData = image.jpegData(compressionQuality: 0.8) {
+            let imageString = imageData.base64EncodedString()
+            realmManager.saveProfile(imageString: imageString)
+            setupProfileImage(imageData: imageData)
+        }
+        picker.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    /// プロフィール画像にセット
+    private func setupProfileImage(imageData: Data) {
+        if let image = UIImage(data: imageData) {
+            // 画像のサイズを32x32にリサイズ
+            let circularImage = image.makeCircularImage(image: image, size: CGSize(width: 32, height: 32))
+            // 画像を使ってUIBarButtonItemを作成する
+            let leftBarButtonItem = UIBarButtonItem(image: circularImage?.withRenderingMode(.alwaysOriginal),
+                                                    style: .plain,
+                                                    target: self,
+                                                    action: #selector(didTapLeftBarButton))
+            // leftBarButtonItemに設定する
+            self.navigationItem.leftBarButtonItem = leftBarButtonItem
+        }
     }
 }
