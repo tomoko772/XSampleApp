@@ -103,7 +103,7 @@ class PostEditViewController: UIViewController {
     @objc private func didTapPostButton() {
         if let name = nameTextField.text, !name.isEmpty,
            let body = textView.text, !body.isEmpty {
-            realmManager.savePost(imageString: imageString, name: name, body:body)
+            realmManager.savePost(imageString: imageString, name: name, body: body)
             delegate?.update()
             dismiss(animated: true, completion: nil)
         } else {
