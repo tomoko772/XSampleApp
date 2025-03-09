@@ -7,7 +7,7 @@
 
 import UIKit
 
-///デリゲートのプロトコル
+/// デリゲートのプロトコル
 protocol PostEditViewControllerDelegate: AnyObject {
     func update()
 }
