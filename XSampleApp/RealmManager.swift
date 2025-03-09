@@ -36,12 +36,12 @@ final class RealmManager {
     }
     
     /// 投稿を取得
-    func getPosts() -> Results<Post> {
+    private func getPosts() -> Results<Post> {
         return realm.objects(Post.self).sorted(byKeyPath: "date", ascending: false)
     }
     
     /// 投稿を保存
-    func savePost(imageString: String, name: String, body: String) {
+    private func savePost(imageString: String, name: String, body: String) {
         let post = Post()
         post.imageString = imageString
         post.name = name
