@@ -58,13 +58,13 @@ class PostEditViewController: UIViewController {
     }
     
     /// アラートを表示
-      private func showAlert(title: String) {
-          let alert = UIAlertController(title: title,
-                                        message: "",
-                                        preferredStyle: .alert)
-          alert.addAction(UIAlertAction(title: "OK", style: .default))
-          self.present(alert, animated: true, completion: nil)
-      }
+    private func showAlert(title: String) {
+        let alert = UIAlertController(title: title,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     private func configureBarButtonItems() {
         let cancelButton = UIBarButtonItem(title:"キャンセル",
@@ -111,19 +111,19 @@ class PostEditViewController: UIViewController {
         }
     }
     
-
-/// プロフィール画像の設定
-private func configureProfileImage() {
-    if let profile = realmManager.getProfile(),
-       let imageString = profile.imageString,
-       let imageData = Data(base64Encoded: imageString),
-       let image = UIImage(data: imageData) {
-        self.imageString = imageString
-        userImageView.image = image
-    } else {
-        userImageView.image = UIImage(systemName: "person")
+    
+    /// プロフィール画像の設定
+    private func configureProfileImage() {
+        if let profile = realmManager.getProfile(),
+           let imageString = profile.imageString,
+           let imageData = Data(base64Encoded: imageString),
+           let image = UIImage(data: imageData) {
+            self.imageString = imageString
+            userImageView.image = image
+        } else {
+            userImageView.image = UIImage(systemName: "person")
+        }
     }
-}
 }
 
 // MARK: - Extensions
