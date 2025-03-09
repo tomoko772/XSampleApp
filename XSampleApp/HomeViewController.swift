@@ -34,7 +34,7 @@ final class HomeViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    /// ポストボタンをタップ
+    /// テーブルビューを表示するためのIBOutlet
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - View Life-Cycle Methods
