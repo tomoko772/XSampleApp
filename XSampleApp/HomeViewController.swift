@@ -91,6 +91,12 @@ final class HomeViewController: UIViewController {
         present(imagePickerController, animated: true, completion: nil)
     }
     
+    
+    /// ポストデータを取得
+    private func fetchData() {
+        posts = realmManager.getPosts()
+    }
+    
     private func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
