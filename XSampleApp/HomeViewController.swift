@@ -12,23 +12,7 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Properties
     
-    let cells: [Home] = [
-        Home(
-            imageString: "image1",
-            name: "山田太郎",
-            body: "This is the body of cell 1"
-        ),
-        Home(
-            imageString: "image2",
-            name: "佐藤花子",
-            body: "This is the body of cell 2"
-        ),
-        Home(
-            imageString: "image3",
-            name: "吉田沙織",
-            body: "This is the body of cell 3"
-        )
-    ]
+    
     /// RealmManagerのインスタンス
     private let realmManager = RealmManager()
     
