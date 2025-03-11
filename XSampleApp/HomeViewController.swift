@@ -170,3 +170,13 @@ extension HomeViewController: UIImagePickerControllerDelegate & UINavigationCont
         }
     }
 }
+
+// MARK: - PostEditViewControllerDelegate
+
+extension HomeViewController: PostEditViewControllerDelegate {
+    /// テーブルビューをリロード
+    func update() {
+        tableView.reloadData()
+    }
+}
+
