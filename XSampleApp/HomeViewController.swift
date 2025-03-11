@@ -12,9 +12,10 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Properties
     
-    
     /// RealmManagerのインスタンス
     private let realmManager = RealmManager()
+    ///投稿データ
+    private var posts: Results<Post>!
     
     // MARK: - IBOutlets
     
