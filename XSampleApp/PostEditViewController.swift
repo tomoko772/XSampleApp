@@ -7,6 +7,11 @@
 
 import UIKit
 
+/// デリゲートのプロトコル
+protocol PostEditViewControllerDelegate:AnyObject {
+    func update()
+}
+
 /// ポスト編集画面
 class PostEditViewController: UIViewController {
     
@@ -17,6 +22,8 @@ class PostEditViewController: UIViewController {
     private let realmManager = RealmManager.shared
     /// 画像
     private var imageString: String = ""
+    /// デリゲートのプロパティ
+    weak var delegate: PostEditViewControllerDelegate?
     
     // MARK: - IBOutlets
     
@@ -49,6 +56,16 @@ class PostEditViewController: UIViewController {
         // デリゲートを設定
         placeholderTextView.delegate = self
     }
+    
+    /// アラートを表示
+    private func showAlert(title: String) {
+        let alert = UIAlertController(title: title,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     private func configureBarButtonItems() {
         let cancelButton = UIBarButtonItem(title:"キャンセル",
@@ -85,8 +102,16 @@ class PostEditViewController: UIViewController {
     
     /// 「ポスト」バーボタンをタップ
     @objc private func didTapPostButton() {
-        // ボタンがタップされたときの処理をここに記述
+        if let name = nameTextField.text, !name.isEmpty,
+           let body = textView.text, !body.isEmpty {
+            realmManager.savePost(imageString: imageString, name: name, body:body)
+            delegate?.update()
+            dismiss(animated: true, completion: nil)
+        } else {
+            showAlert(title: "ポスト内容がありません")
+        }
     }
+    
     
     /// プロフィール画像の設定
     private func configureProfileImage() {
