@@ -7,13 +7,14 @@
 
 import UIKit
 import RealmSwift
+
 /// Home画面
 final class HomeViewController: UIViewController {
     
     // MARK: - Properties
     
     /// RealmManagerのインスタンス
-    private let realmManager = RealmManager()
+    private let realmManager = RealmManager.shared
     ///投稿データ
     private var posts: Results<Post>!
     
@@ -96,7 +97,6 @@ final class HomeViewController: UIViewController {
         imagePickerController.sourceType = .photoLibrary
         present(imagePickerController, animated: true, completion: nil)
     }
-    
     
     /// ポストデータを取得
     private func fetchData() {
