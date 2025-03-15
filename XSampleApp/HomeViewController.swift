@@ -42,6 +42,7 @@ final class HomeViewController: UIViewController {
     /// ポストボタンをタップ
     @IBAction func didTapPostButton(_ sender: Any) {
         let vc = PostEditViewController()
+        vc.delegate = self
         let navi = UINavigationController(rootViewController: vc)
         navi.modalPresentationStyle = .fullScreen
         navigationController?.present(navi, animated: true)
