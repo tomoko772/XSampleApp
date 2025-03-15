@@ -32,6 +32,11 @@ final class HomeViewController: UIViewController {
         configureTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchData()
+    }
+    
     // MARK: - IBActions
     
     /// ポストボタンをタップ
