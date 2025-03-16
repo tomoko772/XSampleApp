@@ -18,7 +18,12 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet private weak var bodyLabel: UILabel!
     
     func configure(imageString: String, name: String, body: String) {
-        self.userImageView.image = UIImage (named: imageString)
+        if let imageData = Data(base64Encoded: imageString),
+           let image = UIImage(data: imageData) {
+            self.userImageView.image = image
+        } else {
+            self.userImageView.image = UIImage(systemName: "person.circle.fill")
+        }
         self.userNameLabel.text = name
         self.bodyLabel.text = body
     }
